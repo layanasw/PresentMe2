@@ -1,0 +1,51 @@
+//
+//  knana4.swift
+//  PresentMe2
+//
+//  Created by Knana Adel Alshabibi on 27/03/1446 AH.
+//
+
+import SwiftUI
+
+struct WelcomeView: View {
+    var body: some View {
+        VStack {
+            Spacer()
+            
+            // Title
+            Text("Welcome")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .foregroundColor(.black)
+                .padding(.bottom, 20)
+            
+          
+            
+            Spacer()
+            
+            // Start Button
+            Button(action: {
+                // Action for Start button
+                print("Start button tapped!")
+            }) {
+                Text("Start")
+                    .font(.title2)
+                    .foregroundColor(.white)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.blue)
+                    .cornerRadius(25)
+                    .shadow(radius: 5)
+            }
+            .padding(.horizontal, 30)
+            .padding(.bottom, 50)
+        }
+        
+    }
+}
+
+struct WelcomeView_Previews: PreviewProvider {
+    static var previews: some View {
+        WelcomeView()
+    }
+}
